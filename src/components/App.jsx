@@ -1,6 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { followUser, getUsers } from '../redux/operations';
 import { useEffect } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { SharedLayout } from './SharedLayout/SharedLayout';
+import Home from './pages/Home';
+import Tweets from './pages/Tweets';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -20,5 +24,13 @@ export const App = () => {
   //   })
   // );
 
-  return <p>Hi</p>;
+  return (
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<Home />} />
+        <Route path="/tweets" element={<Tweets />} />
+      </Route>
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
 };
