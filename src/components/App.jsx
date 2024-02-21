@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { followUser, getUsers } from '../redux/operations';
+import { getUsers } from '../redux/operations';
 import { useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { SharedLayout } from './SharedLayout/SharedLayout';
