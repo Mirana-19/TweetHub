@@ -8,7 +8,7 @@ export const getUsers = createAsyncThunk(
   async (params, thunkAPI) => {
     try {
       const { data } = await axios.get('/tweets', {
-        params: { ...params, limit: 10 },
+        params: { ...params, limit: 3 },
       });
       return data;
     } catch (error) {
