@@ -9,7 +9,7 @@ const Tweets = () => {
   const page = useSelector(selectPage);
   const tweets = useSelector(selectTweets);
   useEffect(() => {
-    dispatch(getUsers({ page: 1 }));
+    dispatch(getUsers({ page }));
   }, [dispatch, page]);
 
   return <UsersList users={tweets} />;
