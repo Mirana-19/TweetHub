@@ -1,12 +1,10 @@
 import { UserCard } from 'components/UserCard/UserCard';
-import { useDispatch, useSelector } from 'react-redux';
-import { incrementPage, selectPage } from '../../redux/slice';
-import { useEffect } from 'react';
-import { getUsers } from '../../redux/operations';
+import { useDispatch } from 'react-redux';
+import { incrementPage } from '../../redux/slice';
 
 export const UsersList = ({ users } = []) => {
   const dispatch = useDispatch();
-  const page = useSelector(selectPage);
+
   const onLoadMore = () => {
     dispatch(incrementPage());
   };
