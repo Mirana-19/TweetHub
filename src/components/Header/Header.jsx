@@ -4,7 +4,7 @@ export const Header = () => {
   const location = useLocation();
 
   return (
-    <div className="navbar bg-base-200">
+    <header className=" navbar bg-base-200">
       <div role="tablist" className="tabs tabs-boxed">
         <NavLink
           className={`tab ${location.pathname === '/' ? 'tab-active' : ''}`}
@@ -23,6 +23,6 @@ export const Header = () => {
           Tweets
         </NavLink>
       </div>
-    </div>
+    </header>
   );
 };
