@@ -40,7 +40,15 @@ const tweetSlice = createSlice({
       })
       .addCase(getUsers.pending, state => {
         state.isLoading = true;
-      });
+      })
+      .addMatcher(
+        action => action.type.endsWith('/rejected'),
+        (state, action) => {
+          state.error = action.error.message || 'An error occurred';
+          state.isLoading = false;
+          console.error('API request failed with error:', action.error);
+        }
+      );
   },
   selectors: {
     selectTweets: state => state.data,
