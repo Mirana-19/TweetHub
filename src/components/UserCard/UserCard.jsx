@@ -49,7 +49,7 @@ export const UserCard = user => {
         {tweets} Tweets
       </p>
       <p className="mt-[16px] font-sans font-medium text-[18px] uppercase text-whiteText">
-        {followers} Followers
+        {followers.toLocaleString('en-US', { useGrouping: true })} Followers
       </p>
       <button
         type="button"
