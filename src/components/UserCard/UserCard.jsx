@@ -15,7 +15,10 @@ export const UserCard = user => {
   };
 
   return (
-    <div className="w-[380px] px-[36px] pb-[36px] pt-[28px] flex flex-col items-center bg-main rounded-[12px] bg-customgradient shadow-shadowCard relative">
+    <li
+      key={user.id}
+      className="w-[380px] px-[36px] pb-[36px] pt-[28px] flex flex-col items-center bg-main rounded-[12px] bg-customgradient shadow-shadowCard relative"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="76"
@@ -55,6 +58,6 @@ export const UserCard = user => {
       >
         {following ? 'Following' : 'Follow'}
       </button>
-    </div>
+    </li>
   );
 };

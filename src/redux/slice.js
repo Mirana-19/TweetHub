@@ -16,11 +16,17 @@ const tweetSlice = createSlice({
     incrementPage: state => {
       state.page += 1;
     },
+    clearUsers(state) {
+      state.data = initialState.data;
+      state.page = initialState.page;
+      state.error = initialState.error;
+    },
   },
   extraReducers: builder => {
     builder
       .addCase(getUsers.fulfilled, (state, { payload }) => {
         state.data = [...state.data, ...payload];
+        state.isLoading = false;
       })
       .addCase(followUser.fulfilled, (state, { payload }) => {
         state.data = state.data.map(user =>
@@ -31,6 +37,9 @@ const tweetSlice = createSlice({
         state.data = state.data.map(user =>
           user.id === payload.id ? { ...user, ...payload } : user
         );
+      })
+      .addCase(getUsers.pending, state => {
+        state.isLoading = true;
       });
   },
   selectors: {
@@ -42,6 +51,6 @@ const tweetSlice = createSlice({
 });
 
 export const tweetsReducer = tweetSlice.reducer;
-export const { incrementPage } = tweetSlice.actions;
+export const { incrementPage, clearUsers } = tweetSlice.actions;
 export const { selectTweets, selectError, selectIsLoading, selectPage } =
   tweetSlice.selectors;
