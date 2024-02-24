@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/TweetHub/static/css/main.5d734123.css",
-    "main.js": "/TweetHub/static/js/main.bd600427.js",
+    "main.js": "/TweetHub/static/js/main.09479b2e.js",
     "static/media/bgPicture.png": "/TweetHub/static/media/bgPicture.b3d9942b3f9d5dad1ff0.png",
     "index.html": "/TweetHub/index.html",
     "main.5d734123.css.map": "/TweetHub/static/css/main.5d734123.css.map",
-    "main.bd600427.js.map": "/TweetHub/static/js/main.bd600427.js.map"
+    "main.09479b2e.js.map": "/TweetHub/static/js/main.09479b2e.js.map"
   },
   "entrypoints": [
     "static/css/main.5d734123.css",
-    "static/js/main.bd600427.js"
+    "static/js/main.09479b2e.js"
   ]
 }
