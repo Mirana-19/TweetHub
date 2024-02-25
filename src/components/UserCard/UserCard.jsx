@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { followUser, unFollowUser } from '../../redux/operations';
 
 const buttonNotFollowing =
-  'mt-[26px] w-[196px] px-[28px] py-[14px]  shadow-shadowButton rounded-[10px] text-[#373737] text-[18px] font-sans font-semibold uppercase bg-white hover:bg-secondary';
+  'mt-[26px] w-[196px] px-[28px] py-[14px]  shadow-shadowButton rounded-[10px] text-[#373737] text-[18px] font-sans font-semibold uppercase bg-white hover:bg-secondary bg-whiteText';
 const buttonFollowing =
   'mt-[26px] w-[196px] px-[28px] py-[14px]  shadow-shadowButton rounded-[10px] text-[#373737] text-[18px] font-sans font-semibold uppercase bg-secondary hover:bg-white';
 
